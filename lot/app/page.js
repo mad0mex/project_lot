@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import GnForm from "./components/GnForm";
 
 export default function Home() {
     const [selectedProduct, setSelectedProduct] = useState(null);
@@ -35,6 +36,10 @@ export default function Home() {
             ) : (
                 <div className="flex flex-col items-center gap-4">
                     <h2 className="text-xl text-black font-semibold">{selectedProduct} erfassen</h2>
+                    <p className=" text-center text-gray-700">Jedes Feld muss ausgefüllt werden. Wenn es keine Charge oder MHD gibt, dann bitte NA eingeben.</p>
+
+                    {selectedProduct === "GN-T" && <GnForm />}
+
                     <button 
                         className="px-4 py-2 bg-amber-300 text-white rounded-lg hover:bg-amber-400 transition"
                         onClick={() => setSelectedProduct(null)}
