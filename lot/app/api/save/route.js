@@ -1,6 +1,9 @@
-import db from '@/lib/db';
+import {getDb} from '@/lib/db';
 
 export async function POST(req) {
+  const db = getDb();
+
+  
   try {
     const data = await req.json();
 
