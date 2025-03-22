@@ -38,6 +38,7 @@ export default function Home() {
                     <h2 className="text-xl text-black font-semibold">{selectedProduct} erfassen</h2>
                     <p className=" text-center text-gray-700">Jedes Feld muss ausgefüllt werden. Wenn es keine Charge oder MHD gibt, dann bitte NA eingeben.</p>
 
+                    {/* Laden der Formulare */}
                     {selectedProduct === "GN-T" && <GnForm />}
 
                     <button 
