@@ -1,25 +1,21 @@
 "user client";
 import { useEffect, useState } from "react";
 
-export default function GnForm() {
+export default function SklForm() {
     const fields = [
-        { name: "tomaten-gehackt", title: "Tomaten gehackt", defaultMarke: "BYD" },
-        // { name: "tomaten-mark", title: "Tomaten Mark" },
-        // { name: "tomaten-flocken", title: "Tomaten Flocken", defaultMarke: "Bioservice Zach" },
-        // { name: "basilikum", title: "Basilikum" },
-        // { name: "zucker", title: "Zucker", defaultMarke: "Agrana (BG)" },
-        // { name: "salz-fuellung", title: "Salz (Füllung)", defaultMarke: "Bad Ischler" },
-        // { name: "kartoffel", title: "Kartoffel", defaultMarke: "Kartoffelhof Schramm" },
-        // { name: "griess", title: "Griess" },
-        // { name: "mehl", title: "Mehl", defaultMarke: "Wiener Gusto" },
-        // { name: "staerke", title: "Stärke" },
-        // { name: "oel", title: "Öl", defaultMarke: "Ölmühle Raab" },
+        { name: "topfen", title: "Topfen", defaultMarke: "Salzburgmilch" },
+        { name: "reibkaese", title: "Reibkäse", defaultMarke: "Käsehütte Stix" },
+        // { name: "salz-fuellung", title: "Salz (Füllung", defaultMarke: "Bad Ischler" },
+        // { name: "pfeffer-schwarz-geschrotet", title: "Pfeffer schwarz geschrotet", defaultMarke: "Sonnentor" },
+        // { name: "spinat", title: "Spinat", defaultMarke: "Ardo" },
+        // { name: "semmelwuerfel", title: "Semmelwürfel", defaultMarke: "Land Leben" },
+        // { name: "zwiebel-wuerfel", title: "Zwiebel Würfel 5mm", defaultMarke: "Bio Lutz" },
+        // { name: "kartoffelstaerke", title: "Kartoffelstärke", defautMarke: "Bio Kartoffel Nord GmbH & Co KG (Bauck Mühle)" },
+        // { name: "knoblauch-pulver", title: "Knoblauch Pulver", defaultMarke: "Raps" },
         // { name: "salz", title: "Salz", defaultMarke: "Bad Ischler" },
-        // { name: "spinat-pulver", title: "Spinat Pulver", defaultMarke: "Bioservice Zach" },
-
     ];
 
-    const productKey = "GN-T";
+    const productKey = "SKL";
     const [success, setSuccess] = useState(false);
     const [secondsLeft, setSecondsLeft] = useState(5);
 
@@ -53,7 +49,7 @@ export default function GnForm() {
     const handleChange = (e) => {
         const updatedData = {
             ...formData,
-            [e.target.name]: e.target.value.trim()
+            [e.target.name]: e.target.value
         };
         setFormData(updatedData);
         sessionStorage.setItem(productKey, JSON.stringify(updatedData));

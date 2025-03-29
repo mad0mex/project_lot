@@ -2,7 +2,8 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import GnForm from "./components/GnForm";
+import GntForm from "./components/GntForm";
+import SklForm from "./components/SklForm";
 
 export default function Home() {
     const [selectedProduct, setSelectedProduct] = useState(null);
@@ -39,7 +40,8 @@ export default function Home() {
                     <p className=" text-center text-gray-700">Jedes Feld muss ausgefüllt werden. Wenn es keine Charge oder MHD gibt, dann bitte NA eingeben.</p>
 
                     {/* Laden der Formulare */}
-                    {selectedProduct === "GN-T" && <GnForm />}
+                    {selectedProduct === "GN-T" && <GntForm />}
+                    {selectedProduct === "SKL" && <SklForm />}
 
                     <button 
                         className="px-4 py-2 bg-amber-300 text-white rounded-lg hover:bg-amber-400 transition"
